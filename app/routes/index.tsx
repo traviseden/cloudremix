@@ -3,7 +3,7 @@ export default function Index() {
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>What's up Remix?!?</h1>
       <ul>
-        <li>The demo app was built in 316ms!!1!</li>
+        <li>The demo app was built in 316ms!</li>
         <li>
           <a
             target="_blank"
