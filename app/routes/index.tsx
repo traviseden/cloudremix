@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
@@ -28,6 +30,18 @@ export default function Index() {
           </a>
         </li>
       </ul>
+      <Counter />
     </div>
+  );
+}
+
+function Counter() {
+  let [count, setCount] = useState(0);
+  useEffect(() => {
+    let ticker = setInterval(() => void setCount(n => n + 1), 1000);
+    return () => clearInterval(ticker);
+  }, [])
+  return (
+    <p>Count: {count}s</p>
   );
 }
